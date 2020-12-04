@@ -3,7 +3,7 @@
         <el-header></el-header>
         <el-main>
             <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form">
-                <h3 class="title">博客后台管理</h3>
+                <h3 class="title">后台管理</h3>
                 <el-form-item prop="username">
                     <el-input v-model="loginForm.username" type="text" auto-complete="off" placeholder="账号">
                         <v-icon slot="prefix" iconClass="user" class="el-input__icon input-icon"/>
@@ -97,7 +97,7 @@
         display: -webkit-flex;
         align-items: center;
     }
-    
+
     .login {
         display: flex;
         justify-content: center;
