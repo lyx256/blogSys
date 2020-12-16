@@ -1,23 +1,17 @@
 <template>
-  <el-container class="Login">
-        <el-header></el-header>
+  <el-container class="login">
+
         <el-main>
             <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form">
-                <h3 class="title">权限后台管理</h3>
+                <h3 class="title">博客后台管理</h3>
                 <el-form-item prop="username">
-                    <el-input v-model="loginForm.username" type="text" auto-complete="off" placeholder="账号">
-                        <v-icon slot="prefix" iconClass="user" class="el-input__icon input-icon"/>
+                    <el-input v-model="loginForm.username" type="text" auto-complete="off" placeholder="账号" prefix-icon="el-icon-user-solid">
+                        <v-icon slot="prefix" class="el-input__icon input-icon"/>
                     </el-input>
                 </el-form-item>
                 <el-form-item prop="password">
-                    <el-input
-                            v-model="loginForm.password"
-                            type="password"
-                            auto-complete="off"
-                            placeholder="密码"
-                            @keyup.enter.native="handleLogin"
-                    >
-                        <v-icon slot="prefix" iconClass="password" class="el-input__icon input-icon"/>
+                    <el-input placeholder="密码" v-model="loginForm.password" show-password prefix-icon="el-icon-lock">
+                        <v-icon slot="prefix"  class="el-input__icon input-icon"/>
                     </el-input>
                 </el-form-item>
 
@@ -38,11 +32,10 @@
         </el-main>
         <el-footer>
             <div class="el-login-footer">
-                <span>Technical support --ccic-net.</span>
+                <span>Technical support -- LL.com.cn</span>
             </div>
         </el-footer>
     </el-container>
-
 </template>
 
 <script>
@@ -59,7 +52,7 @@
       }
     },
     methods: {
-      
+
     }
   }
 </script>
@@ -75,7 +68,6 @@
         display: -webkit-flex;
         align-items: center;
     }
-
     .el-main {
         background-color: #E9EEF3;
         color: #333;
@@ -91,37 +83,26 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-image: url("../assets/login-background.jpg");
         height: 100%;
-        background-image: url("../assets/login-back/login-background.jpg");
-        background-size: cover;
-    }
+      background-size: cover;
 
+    }
     .title {
         margin: 0px auto 30px auto;
         text-align: center;
         color: #ffffff;
     }
-
-    .login-form {
-        border-radius: 6px;
-        /*background-image: url("../assets/login-backs.png");*/
-        width: 400px;
-        padding: 25px 25px 5px 25px;
-        margin: auto;
-        box-sizing: inherit;
-    }
-
     img {
         cursor: pointer;
         vertical-align: middle;
     }
-
-    .input-icon {
+   /* .input-icon {
         height: 14px;
         width: 14px;
         margin-left: 2px;
 
-    }
+    }*/
 
     .el-login-footer {
         height: 40px;
@@ -136,6 +117,5 @@
         letter-spacing: 1px;
         margin: auto;
     }
-
-
 </style>
+
